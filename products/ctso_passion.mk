@@ -13,4 +13,10 @@ PRODUCT_COPY_FILES +=  \
     vendor/ctso/prebuilt/common/libganril.so:system/lib/libganril.so \
     vendor/ctso/prebuilt/common/libhtc_ril.so:system/lib/libhtc_ril.so \
     vendor/ctso/prebuilt/common/libkineto.so:system/lib/libkineto.so \
-    vendor/ctso/prebuilt/common/librilswitch.so:system/lib/librilswitch.so
+    vendor/ctso/prebuilt/common/librilswitch.so:system/lib/librilswitch.so \
+    vendor/ctso/prebuilt/common/MS-HTCVISION-KNT20-02.apk:system/app/MS-HTCVISION-KNT20-02.apk
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    rild.libpath=/system/lib/librilswitch.so \
+    rilswitch.vendorlibpath=/system/lib/libhtc_ril.so \
+    rilswitch.ganlibpath=/system/lib/libganril.so
