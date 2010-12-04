@@ -21,7 +21,7 @@ echo "<boolean name=\"pref_battery_percentage\" value=\"true\" />" >> com.cyanog
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('battery_percentage_status_icon','1');"
 #battery percentage text color
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "DELETE FROM \"system\" WHERE \"name\" = \"battery_status_color_title\";"
-/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('battery_status_color_title','1');"
+/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('battery_status_color_title','-16777216');"
 #show clock on status bar
 cat com.cyanogenmod.cmparts_preferences.xml | grep -v show_status_clock > com.cyanogenmod.cmparts_preferences.xml.new && rm com.cyanogenmod.cmparts_preferences.xml && mv com.cyanogenmod.cmparts_preferences.xml.new com.cyanogenmod.cmparts_preferences.xml
 echo "<boolean name=\"show_status_clock\" value=\"true\" />" >> com.cyanogenmod.cmparts_preferences.xml
@@ -34,7 +34,7 @@ echo "<boolean name=\"show_clock_am_pm\" value=\"true\" />" >> com.cyanogenmod.c
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('show_clock_period','1');"
 #clock text color
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "DELETE FROM \"system\" WHERE \"name\" = \"clock_color\";"
-/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('clock_color','-1');"
+/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('clock_color','-16711681');"
 #show dbm
 cat com.cyanogenmod.cmparts_preferences.xml | grep -v show_status_dbm > com.cyanogenmod.cmparts_preferences.xml.new && rm com.cyanogenmod.cmparts_preferences.xml && mv com.cyanogenmod.cmparts_preferences.xml.new com.cyanogenmod.cmparts_preferences.xml
 echo "<boolean name=\"show_status_dbm\" value=\"false\" />" >> com.cyanogenmod.cmparts_preferences.xml
@@ -42,10 +42,10 @@ echo "<boolean name=\"show_status_dbm\" value=\"false\" />" >> com.cyanogenmod.c
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('show_status_dbm','0');"
 #dbm text color
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "DELETE FROM \"system\" WHERE \"name\" = \"dbm_color\";"
-/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('dbm_color','-1');"
+/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('dbm_color','-16777216');"
 #date text color
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "DELETE FROM \"system\" WHERE \"name\" = \"date_color\";"
-/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('date_color','-1');"
+/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('date_color','-16711681');"
 #spn label color
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "DELETE FROM \"system\" WHERE \"name\" = \"spn_label_color\";"
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('spn_label_color','-1');"
@@ -92,31 +92,12 @@ echo "<string name=\"show_plmn_ls\" value=\"true\" />" >> com.cyanogenmod.cmpart
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('latest_notifications_color','-1');"
 #notifications title color
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "DELETE FROM \"system\" WHERE \"name\" = \"notifications_title_color\";"
-/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('notifications_title_color','-1');"
+/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('notifications_title_color','-16777216');"
 #notifications text color
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "DELETE FROM \"system\" WHERE \"name\" = \"notifications_text_color\";"
-/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('notifications_text_color','-1');"
+/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('notifications_text_color','-1677721');"
 #notifications time color
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "DELETE FROM \"system\" WHERE \"name\" = \"notifications_time_color\";"
-/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('notifications_time_color','-1');"
+/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('notifications_time_color','-16777216');"
 echo "</map>" >> com.cyanogenmod.cmparts_preferences.xml
-
-#adw launcher background push colors
-if [ -d /data/data/com.android.launcher/shared_prefs ]; then
-  cd /data/data/com.android.launcher/shared_prefs
-else
-  mkdir -p /data/data/com.android.launcher/shared_prefs
-  cd /data/data/com.android.launcher/shared_prefs
-fi
-if [ -f launcher.preferences.almostnexus.xml ]; then
-  cat launcher.preferences.almostnexus.xml | grep -v highlights_color > launcher.preferences.almostnexus.xml.new && rm launcher.preferences.almostnexus.xml && mv launcher.preferences.almostnexus.xml.new launcher.preferences.almostnexus.xml
-  cat launcher.preferences.almostnexus.xml | grep -v highlights_color_focus > launcher.preferences.almostnexus.xml.new && rm launcher.preferences.almostnexus.xml && mv launcher.preferences.almostnexus.xml.new launcher.preferences.almostnexus.xml
-  cat launcher.preferences.almostnexus.xml | grep -v "</map>" > launcher.preferences.almostnexus.xml.new && rm launcher.preferences.almostnexus.xml && mv launcher.preferences.almostnexus.xml.new launcher.preferences.almostnexus.xml
-else
-  echo "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>" > launcher.preferences.almostnexus.xml
-  echo "<map>" >> launcher.preferences.almostnexus.xml
-fi
-echo "<int name=\"highlights_color\" value=\"-7560499\" />" >> launcher.preferences.almostnexus.xml
-echo "<int name=\"highlights_color_focus\" value=\"-7560499\" />" >> launcher.preferences.almostnexus.xml
-echo "</map>" >> launcher.preferences.almostnexus.xml
 cd $NCWD
