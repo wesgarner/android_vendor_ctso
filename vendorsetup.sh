@@ -1,2 +1,3 @@
 add_lunch_combo mau5_passion-eng
 add_lunch_combo mau5_vision-eng
+add_lunch_combo mau5_sholes-eng
