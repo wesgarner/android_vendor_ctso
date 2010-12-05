@@ -1,7 +1,7 @@
 # Inherit cyanogenmod configurations
 $(call inherit-product, vendor/cyanogen/products/cyanogen_passion.mk)
 
-PRODUCT_NAME := mau5_passion
+PRODUCT_NAME := mau5_common
 
 # Reorder Product Overlays to properly include theme specific stuff before
 # anything else
