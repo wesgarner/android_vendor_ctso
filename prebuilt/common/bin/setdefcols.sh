@@ -95,7 +95,7 @@ echo "<string name=\"show_plmn_ls\" value=\"true\" />" >> com.cyanogenmod.cmpart
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('notifications_title_color','-16777216');"
 #notifications text color
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "DELETE FROM \"system\" WHERE \"name\" = \"notifications_text_color\";"
-/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('notifications_text_color','-1677721');"
+/system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('notifications_text_color','-16777216');"
 #notifications time color
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "DELETE FROM \"system\" WHERE \"name\" = \"notifications_time_color\";"
 /system/xbin/sqlite3 /data/data/com.android.providers.settings/databases/settings.db "INSERT INTO \"system\" (\"name\", \"value\") VALUES('notifications_time_color','-16777216');"
