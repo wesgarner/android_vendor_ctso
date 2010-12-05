@@ -22,6 +22,7 @@ PRODUCT_COPY_FILES += \
     vendor/ctso/prebuilt/passion/app/MS-HTCVISION-KNT20-02.apk:system/app/MS-HTCVISION-KNT20-02.apk \
     vendor/ctso/prebuilt/common/fonts/DroidSans.ttf:system/fonts/DroidSans.ttf \
     vendor/ctso/prebuilt/common/fonts/DroidSans-Bold.ttf:system/fonts/DroidSans-Bold.ttf \
-    vendor/ctso/prebuilt/common/bin/setdefcols.sh:system/bin/setdefcols.sh
+    vendor/ctso/prebuilt/common/bin/setdefcols.sh:system/bin/setdefcols.sh \
+    vendor/ctso/prebuilt/common/app/ThemeDefaults.apk:system/app/ThemeDefaults.apk
 
 PRODUCT_PACKAGES += Mau5Wallpapers
