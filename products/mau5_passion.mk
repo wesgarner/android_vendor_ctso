@@ -9,18 +9,19 @@ PRODUCT_PACKAGE_OVERLAYS := vendor/ctso/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/passion
 
-#PRODUCT_COPY_FILES +=  \
-#    vendor/ctso/prebuilt/common/libganril.so:system/lib/libganril.so \
-#    vendor/ctso/prebuilt/common/libhtc_ril.so:system/lib/libhtc_ril.so \
-#    vendor/ctso/prebuilt/common/libkineto.so:system/lib/libkineto.so \
-#    vendor/ctso/prebuilt/common/librilswitch.so:system/lib/librilswitch.so \
-#    vendor/ctso/prebuilt/common/MS-HTCVISION-KNT20-02.apk:system/app/MS-HTCVISION-KNT20-02.apk
-
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    rild.libpath=/system/lib/librilswitch.so \
-#    rilswitch.vendorlibpath=/system/lib/libhtc_ril.so \
-#    rilswitch.ganlibpath=/system/lib/libganril.so
+PRODUCT_PROPERTY_OVERRIDES += \
+    rild.libpath=/system/lib/librilswitch.so \
+    rilswitch.vendorlibpath=/system/lib/libhtc_ril.so \
+    rilswitch.ganlibpath=/system/lib/libganril.so
 
 PRODUCT_COPY_FILES += \
+    vendor/ctso/prebuilt/passion/lib/libganril.so:system/lib/libganril.so \
+    vendor/ctso/prebuilt/passion/lib/libhtc_ril.so:system/lib/libhtc_ril.so \
+    vendor/ctso/prebuilt/passion/lib/libkineto.so:system/lib/libkineto.so \
+    vendor/ctso/prebuilt/passion/lib/librilswitch.so:system/lib/librilswitch.so \
+    vendor/ctso/prebuilt/passion/app/MS-HTCVISION-KNT20-02.apk:system/app/MS-HTCVISION-KNT20-02.apk \
     vendor/ctso/prebuilt/common/fonts/DroidSans.ttf:system/fonts/DroidSans.ttf \
-    vendor/ctso/prebuilt/common/fonts/DroidSans-Bold.ttf:system/fonts/DroidSans-Bold.ttf
+    vendor/ctso/prebuilt/common/fonts/DroidSans-Bold.ttf:system/fonts/DroidSans-Bold.ttf \
+    vendor/ctso/prebuilt/common/bin/setdefcols.sh:system/bin/setdefcols.sh
+
+PRODUCT_PACKAGES += Mau5Wallpapers

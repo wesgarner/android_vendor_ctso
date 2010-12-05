@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+<boolean name="pref_battery_percentage" value="true" />
+<boolean name="show_status_clock" value="true" />
+<boolean name="show_clock_am_pm" value="true" />
+<boolean name="show_status_dbm" value="false" />
+<string name="show_spn_sb" value="true" />
+<string name="show_spn_ls" value="true" />
+<string name="show_plmn_sb" value="true" />
+<string name="show_plmn_ls" value="true" />
+</map>
