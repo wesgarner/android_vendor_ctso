@@ -1,7 +1,7 @@
 # Inherit cyanogenmod configurations
-$(call inherit-product, vendor/cyanogen/products/cyanogen_bravoc.mk)
+$(call inherit-product, vendor/cyanogen/products/cyanogen_inc.mk)
 
-PRODUCT_NAME := mau5_bravoc
+PRODUCT_NAME := mau5_inc
 
 ## common stuff ##
 PRODUCT_PACKAGE_OVERLAYS := vendor/ctso/overlay/common
